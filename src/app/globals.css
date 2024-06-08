@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar {
+    width: 10px; /* Adjust the width of the scrollbar */
+    display:none;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent; /* Light gray color with less opacity */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #000; /* Blue color for the scrollbar thumb */
+    border-radius: 10px; /* Optional: Rounded corners */
+    border: 2px solid transparent; /* Optional: Create some padding around the thumb */
+    background-clip: content-box; /* Optional: Ensure the border is outside the thumb */
+  }
+  
+
 body{
     height:100vh;
 }

@@ -35,7 +35,7 @@ export default function NavBar() {
         <AcmeLogo />
         <p className="font-bold text-inherit">Tharun</p>
       </NavbarBrand>
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent className="hidden sm:flex gap-5" justify="center">
 
         {links.map(
           (link) => {
