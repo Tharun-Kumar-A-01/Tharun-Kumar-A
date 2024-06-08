@@ -6,52 +6,7 @@ const posts = [
     title: 'My First Post',
     url: 'https://picsum.photos/200/300',
     desc: 'Hello guys this is my first post'
-  },
-  {
-    title: 'My Second Post',
-    url: 'https://picsum.photos/200/300',
-    desc: 'Hello guys this is my second post'
-  },
-  {
-    title: 'My Third Post',
-    url: 'https://picsum.photos/200/300',
-    desc: 'Hello guys this is my third post'
-  },
-  {
-    title: 'My Fourth Post',
-    url: 'https://picsum.photos/200/300',
-    desc: 'Hello guys this is my third post'
-  },
-  {
-    title: 'My Fifth Post',
-    url: 'https://picsum.photos/200/300',
-    desc: 'Hello guys this is my third post'
-  },
-  {
-    title: 'My Sixth Post',
-    url: 'https://picsum.photos/200/300',
-    desc: 'Hello guys this is my third post'
-  },
-  {
-    title: 'My Sixth Post',
-    url: 'https://picsum.photos/200/300',
-    desc: 'Hello guys this is my third post'
-  },
-  {
-    title: 'My Sixth Post',
-    url: 'https://picsum.photos/200/300',
-    desc: 'Hello guys this is my third post'
-  },
-  {
-    title: 'My Sixth Post',
-    url: 'https://picsum.photos/200/300',
-    desc: 'Hello guys this is my third post'
-  },
-  {
-    title: 'My Sixth Post',
-    url: 'https://picsum.photos/200/300',
-    desc: 'Hello guys this is my third post'
-  },
+  }
 ]
 
 const Projects = () => {
