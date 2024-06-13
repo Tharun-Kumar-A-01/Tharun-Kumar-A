@@ -7,20 +7,22 @@ import Footer from "@/components/Footer/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Tharun Kumar",
-  description: "I am a Full Stack developer",
+	title: "Tharun Kumar",
+	description: "I am a Full Stack developer",
 };
 
 export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body className={`${inter.className} h-screen dark text-foreground bg-background`}>
-        <NextUIProvider>
-            <NavBar />
-            <div className="w-full h-full mt-12 bg-background">{children}</div>
-            <Footer />
-        </NextUIProvider>
-      </body>
-    </html>
-  );
+	return (
+		<html lang="en">
+			<body
+				className={`${inter.className} h-screen dark text-foreground bg-background`}
+			>
+				<NextUIProvider>
+					<NavBar />
+					<div className="w-full h-full bg-background">{children}</div>
+					<Footer />
+				</NextUIProvider>
+			</body>
+		</html>
+	);
 }
