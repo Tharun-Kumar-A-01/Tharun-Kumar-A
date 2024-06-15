@@ -9,7 +9,7 @@ export default function PostCard(post) {
           alt="Project"
           height={40}
           radius="sm"
-          src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
+          src="/next.svg"
           width={40}
         />
         <div className="flex flex-col">
@@ -20,6 +20,11 @@ export default function PostCard(post) {
       <Divider/>
       <CardBody>
         <p>{post.desc}</p>
+        <ul className="flex flex-row w-full sm:w-1/2 justify-evenly">
+          <li>Tai</li>
+          <li>Nex</li>
+          <li>Rea</li>
+        </ul>
       </CardBody>
       <Divider/>
       <CardFooter>

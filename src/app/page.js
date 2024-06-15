@@ -8,7 +8,7 @@ const workSans = Work_Sans({
 	weight: ["400", "700"], // Adjust weights as needed
 });
 
-const jetBrainsMono = JetBrains_Mono({
+export const jetBrainsMono = JetBrains_Mono({
 	subsets: ["latin"],
 	weights: ["400", "700"], // You can specify the weights you need
 });
@@ -16,7 +16,7 @@ const jetBrainsMono = JetBrains_Mono({
 export default function Home() {
 	return (
 		<div className="flex flex-col w-screen min-h-screen ">
-			<section className="h-[calc(100vh-65px)] w-full flex justify-around align-middle items-center">
+			<section className="h-[100vh] w-full flex justify-around align-middle items-center">
 				<div className=" ml-20">
 					<p className={`${jetBrainsMono.className} text-primary `}>
 						{"~~>  "}
@@ -40,7 +40,7 @@ export default function Home() {
 							Lets Connect {" ~~>"}
 						</Button>
 						<Button
-							className="ml-2 h-10"
+							className={`${jetBrainsMono.className} font-bold ml-2 h-10`}
 							as={Link}
 							variant="bordered"
 							color="primary"
@@ -63,8 +63,25 @@ export default function Home() {
 					fill
 				/>
 			</section>
-			<section className="h-screen w-full border-2 border-primary">
-				
+			<section className="min-h-screen flex justify-center w-full my-2">
+				<div className="w-full sm:w-11/12 md:w-10/12 lg:w-3/4 bg-background sm:border-1 border-t-1 border-x-none border-b-none border-primary sm:rounded-xl px-2 sm:px-3 md:px-5 lg:px-10 py-10">
+					<h1
+						className={`${jetBrainsMono.className} bg-primary py-2 px-3 font-bold rounded-full  text-background w-fit`}
+					>
+						About
+					</h1>
+					<div className="mt-10 ml-11 border-2 border-primary w-fit h-fit p-3">
+						<p className="text-3xl font-bold text-primary">Tharun Kumar</p>
+						<p className={`${jetBrainsMono.className}`}>Full Stack Developer</p>
+					</div>
+					<div className="h-3/4 flex flex-row p-3">
+						<div className="w-1/2 h-full border-success border-2 p-2"></div>
+						<div className="w-1/2 h-full border-success border-2 p-2 flex flex-col">
+							<div className="w-full h-1/2 border-2 border-primary p-2"></div>
+							<div className="w-full h-1/2 border-2 border-primary p-2"></div>
+						</div>
+					</div>
+				</div>
 			</section>
 		</div>
 	);

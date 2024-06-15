@@ -12,8 +12,8 @@ const posts = [
 
 const Projects = () => {
   return (
-    <div className=' h-full flex-column justify-center items-center '>
-      <h3 className='text-3xl font-bold mb-5 align-self-middle'>Projects</h3>
+    <div className=' pt-16 min-h-screen '>
+      <h3 className='text-3xl  font-bold mb-5 align-self-middle'>Projects</h3>
     <div className="grid grid-cols-3 gap-4">
     {posts.map((post) => {
       return <PostCard key={post.id} {...post} />
