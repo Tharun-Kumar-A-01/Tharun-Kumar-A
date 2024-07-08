@@ -1,16 +1,16 @@
 "use client"
-import React from "react";
 import { Logo } from "./Logo.jsx"
 import { usePathname } from 'next/navigation';
 import Link from "next/link.js";
 import { Button, Divider } from "@nextui-org/react";
-import { jetBrainsMono } from "../../app/page.js";
 import Image from "next/image.js";
+import { JetBrains_Mono } from "next/font/google";
+import { useState } from "react";
 
-// const jetBrainsMono = JetBrains_Mono({
-// 	subsets: ["latin"],
-// 	weights: ["400", "700"], // You can specify the weights you need
-// });
+const jetBrainsMono = JetBrains_Mono({
+	subsets: ["latin"],
+	weights: ["400", "700"], // You can specify the weights you need
+});
 
 const links = [
   {
@@ -29,13 +29,14 @@ const links = [
 
 export default function NavBar() {
 
-
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathName = usePathname()
-
+  
+  
   return (
     
-    <nav className="w-screen h-16 bg-transparent backdrop-blur-sm z-50 border-b-1  border-gray-500 fixed">
+    <nav className="w-screen h-16 bg-transparent backdrop-blur-sm z-50 border-b-1  border-gray-500 fixed sroll" id="navbar">
       <div className="bg-background bg-opacity-85 w-full h-full flex items-center justify-between px-5  md:px-10 lg:px-32 ">
       <div className="font-bold flex flex-row items-center">
       <button

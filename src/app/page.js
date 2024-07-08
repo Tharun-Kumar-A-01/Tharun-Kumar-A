@@ -1,22 +1,22 @@
 import { JetBrains_Mono } from "next/font/google";
 import { Work_Sans } from "next/font/google";
-import { Image, Link, Button } from "@nextui-org/react";
-import { color } from "framer-motion";
+import {  Link, Button } from "@nextui-org/react";
+import Image from "next/image";
 
 const workSans = Work_Sans({
 	subsets: ["latin"],
-	weight: ["400", "700"], // Adjust weights as needed
+	weight: ["400", "700"], 
 });
 
 export const jetBrainsMono = JetBrains_Mono({
 	subsets: ["latin"],
-	weights: ["400", "700"], // You can specify the weights you need
+	weights: ["400", "700"], 
 });
 
 export default function Home() {
 	return (
 		<div className="flex flex-col w-screen min-h-screen ">
-			<section className="h-[100vh] w-full flex justify-around align-middle items-center">
+			<section className="h-[100vh] w-full flex justify-around align-middle items-center" id="home">
 				<div className=" ml-20">
 					<p className={`${jetBrainsMono.className} text-primary `}>
 						{"~~>  "}
@@ -56,14 +56,14 @@ export default function Home() {
 				</div>
 				<Image
 					src="/undraw_programming_re_kg9v.svg"
-					height="400px"
-					width="400px"
+					height={400}
+					width={400}
 					alt="Image"
 					className="hidden lg:block rounded-full"
-					fill
+					
 				/>
 			</section>
-			<section className="min-h-screen flex justify-center w-full my-2">
+			<section className="min-h-screen flex justify-center w-full my-2" id="about">
 				<div className="w-full sm:w-11/12 md:w-10/12 lg:w-3/4 bg-background sm:border-1 border-t-1 border-x-none border-b-none border-primary sm:rounded-xl px-2 sm:px-3 md:px-5 lg:px-10 py-10">
 					<h1
 						className={`${jetBrainsMono.className} bg-primary py-2 px-3 font-bold rounded-full  text-background w-fit`}
@@ -82,6 +82,9 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
+			</section>
+			<section className="min-h-screen flex justify-center w-full my-2" id="projects">
+
 			</section>
 		</div>
 	);
