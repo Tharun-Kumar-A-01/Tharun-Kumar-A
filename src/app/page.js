@@ -2,6 +2,7 @@ import { JetBrains_Mono } from "next/font/google";
 import { Work_Sans } from "next/font/google";
 import {  Link, Button } from "@nextui-org/react";
 import Image from "next/image";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
 const workSans = Work_Sans({
 	subsets: ["latin"],
@@ -24,6 +25,7 @@ export default function Home() {
 					</p>
 					<h1 className="text-5xl font-bold py-1">
 						I am <span className="text-primary">Tharun Kumar</span>
+						<TextGenerateEffect className={`text-5xl font-bold py-1`} words="I am Tharun Kumar" />
 					</h1>
 					<p className={`text-md py-2 ${workSans.className}`}>
 						Aspiring Full Stack Developer with a passion for crafting seamless
