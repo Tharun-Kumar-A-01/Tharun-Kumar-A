@@ -202,7 +202,7 @@ const SkeletonFour = () => {
 				className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
 			>
 				<Image
-					src="/vercel.svg"
+					src="@/public/vercel.svg"
 					alt="avatar"
 					height="100"
 					width="100"

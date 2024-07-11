@@ -3,6 +3,9 @@ import { Work_Sans } from "next/font/google";
 import {  Link, Button } from "@nextui-org/react";
 import Image from "next/image";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import BentoGridThirdDemo from "@/components/ui/bento-grid";
+import { Spotlight } from "@/components/ui/Spotlight";
+import BorderButton from "@/components/ui/border-button";
 
 const workSans = Work_Sans({
 	subsets: ["latin"],
@@ -17,24 +20,31 @@ export const jetBrainsMono = JetBrains_Mono({
 export default function Home() {
 	return (
 		<div className="flex flex-col w-screen min-h-screen ">
-			<section className="h-[100vh] w-full flex justify-around align-middle items-center" id="home">
-				<div className=" ml-20">
-					<p className={`${jetBrainsMono.className} text-primary `}>
+			
+			<section className="bg-grid-white/[0.1] relative h-[100vh] w-full flex justify-around align-middle items-center" id="home">
+				<div className="absolute pointer-events-none inset-0 flex  items-center justify-center -z-5 bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]"></div>
+				<div className="relative flex flex-col items-center justify-center gap-4">
+					<div>
+
+					<p className={`${jetBrainsMono.className} text-primary`}>
 						{"~~>  "}
-						FULL STACK DEVELOPER
+						<span className=" tracking-wider">
+							FULL STACK DEVELOPER
+							</span>
 					</p>
-					<h1 className="text-5xl font-bold py-1">
+					<h1 className="text-5xl font-bold">
 						I am <span className="text-primary">Tharun Kumar</span>
-						<TextGenerateEffect className={`text-5xl font-bold py-1`} words="I am Tharun Kumar" />
+						
 					</h1>
-					<p className={`text-md py-2 ${workSans.className}`}>
+					</div>
+					<p className={`text-md pb-1 ${workSans.className}`}>
 						Aspiring Full Stack Developer with a passion for crafting seamless
 						digital experiences,
 						<br /> continuously learning and innovating one line of code at a
 						time.
 					</p>
 
-					<div className="flex mt-2">
+					<div className="flex gap-2 sm:gap-6 flex-col w-1/2 sm:w-max sm:flex-row">
 						<Button
 							className={`${jetBrainsMono.className} text-background font-bold`}
 							color="primary"
@@ -42,7 +52,7 @@ export default function Home() {
 							Lets Connect {" ~~>"}
 						</Button>
 						<Button
-							className={`${jetBrainsMono.className} font-bold ml-2 h-10`}
+							className={`${jetBrainsMono.className} font-bold h-10`}
 							as={Link}
 							variant="bordered"
 							color="primary"
@@ -55,39 +65,13 @@ export default function Home() {
 							<p>View GitHub</p>
 						</Button>
 					</div>
-				</div>
-				<Image
-					src="/undraw_programming_re_kg9v.svg"
-					height={400}
-					width={400}
-					alt="Image"
-					className="hidden lg:block rounded-full"
 					
-				/>
-			</section>
-			<section className="min-h-screen flex justify-center w-full my-2" id="about">
-				<div className="w-full sm:w-11/12 md:w-10/12 lg:w-3/4 bg-background sm:border-1 border-t-1 border-x-none border-b-none border-primary sm:rounded-xl px-2 sm:px-3 md:px-5 lg:px-10 py-10">
-					<h1
-						className={`${jetBrainsMono.className} bg-primary py-2 px-3 font-bold rounded-full  text-background w-fit`}
-					>
-						About
-					</h1>
-					<div className="mt-10 ml-11 border-2 border-primary w-fit h-fit p-3">
-						<p className="text-3xl font-bold text-primary">Tharun Kumar</p>
-						<p className={`${jetBrainsMono.className}`}>Full Stack Developer</p>
-					</div>
-					<div className="h-3/4 flex flex-row p-3">
-						<div className="w-1/2 h-full border-success border-2 p-2"></div>
-						<div className="w-1/2 h-full border-success border-2 p-2 flex flex-col">
-							<div className="w-full h-1/2 border-2 border-primary p-2"></div>
-							<div className="w-full h-1/2 border-2 border-primary p-2"></div>
-						</div>
-					</div>
 				</div>
 			</section>
-			<section className="min-h-screen flex justify-center w-full my-2" id="projects">
-
-			</section>
+			
+			<section className=" pt-24 pb-10">
+			<BentoGridThirdDemo/>
+		</section>
 		</div>
 	);
 }
