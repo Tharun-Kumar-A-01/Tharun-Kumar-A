@@ -3,20 +3,21 @@ import { cn } from "@/utils/cn";
 import React from "react";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento";
 import {
-	IconBoxAlignRightFilled,
 	IconBrandMongodb,
 	IconBrandNextjs,
 	IconBrandNodejs,
 	IconBrandReact,
+	IconCheck,
 	IconClipboardCopy,
 	IconFileBroken,
+	IconMail,
 	IconSignature,
 	IconTableColumn,
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 const BentoGridThirdDemo = () => {
+
 	return (
 		<BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
 			{items.map((item, i) => (
@@ -201,12 +202,8 @@ const SkeletonFour = () => {
 				variants={first}
 				className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
 			>
-				<Image
-					src="@/public/vercel.svg"
-					alt="avatar"
-					height="100"
-					width="100"
-					className="rounded-full h-10 w-10"
+				<div
+					className="bg-gradient-to-r from-pink-500 to-violet-500 rounded-full h-10 w-10 flex-shrink-0"
 				/>
 				<p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
 					Just code in Vanilla Javascript
@@ -216,12 +213,8 @@ const SkeletonFour = () => {
 				</p>
 			</motion.div>
 			<motion.div className="h-full relative z-20 w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center">
-				<Image
-					src="/vercel.svg"
-					alt="avatar"
-					height="100"
-					width="100"
-					className="rounded-full h-10 w-10"
+			<div
+					className="bg-gradient-to-r from-pink-500 to-violet-500 rounded-full h-10 w-10 flex-shrink-0"
 				/>
 				<p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
 					Tailwind CSS is perfect.
@@ -234,12 +227,8 @@ const SkeletonFour = () => {
 				variants={second}
 				className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
 			>
-				<Image
-					src="/vercel.svg"
-					alt="avatar"
-					height="100"
-					width="100"
-					className="rounded-full h-10 w-10"
+				<div
+					className="bg-gradient-to-r from-pink-500 to-violet-500 rounded-full h-10 w-10 flex-shrink-0"
 				/>
 				<p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
 					I hate angular, RSC, and Redux.
@@ -251,6 +240,7 @@ const SkeletonFour = () => {
 		</motion.div>
 	);
 };
+
 
 const SkeletonFive = () => {
 	const variants = {
@@ -366,7 +356,7 @@ const items = [
 		),
 		header: <SkeletonFive />,
 		className: "md:col-span-1",
-		icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+		icon: <IconMail className="h-4 w-4 text-neutral-500" />,
 	},
 ];
 

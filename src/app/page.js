@@ -20,8 +20,9 @@ export const jetBrainsMono = JetBrains_Mono({
 export default function Home() {
 	return (
 		<div className="flex flex-col w-screen min-h-screen ">
-			
+
 			<section className="bg-grid-white/[0.1] relative h-[100vh] w-full flex justify-around align-middle items-center" id="home">
+
 				<div className="absolute pointer-events-none inset-0 flex  items-center justify-center -z-5 bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]"></div>
 				<div className="relative flex flex-col items-center justify-center gap-4">
 					<div>
