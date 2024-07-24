@@ -278,13 +278,7 @@ const SkeletonFive = () => {
 				variants={variants}
 				className="flex flex-row rounded-2xl border border-neutral-100 dark:border-white/[0.2] p-2  items-start space-x-2 bg-white dark:bg-black"
 			>
-				<Image
-					src="/vercel.svg"
-					alt="avatar"
-					height="100"
-					width="100"
-					className="rounded-full h-10 w-10"
-				/>
+				<div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
 				<p className="text-xs text-neutral-500">
 					There are a lot of cool framerworks out there like React, Angular,
 					Vue, Svelte that can make your life ....

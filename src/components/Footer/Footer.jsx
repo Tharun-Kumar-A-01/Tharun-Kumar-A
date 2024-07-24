@@ -1,5 +1,3 @@
-// Suggested code may be subject to a license. Learn more: ~LicenseLog:201565601.
-// Suggested code may be subject to a license. Learn more: ~LicenseLog:856552693.
 import Link from 'next/link';
 import React from 'react';
 
