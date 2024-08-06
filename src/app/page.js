@@ -8,7 +8,7 @@ import { Spotlight } from "@/components/ui/Spotlight";
 import BorderButton from "@/components/ui/border-button";
 
 const workSans = Work_Sans({
-	subsets: ["latin"],
+ 	subsets: ["latin"],
 	weight: ["400", "700"], 
 });
 
@@ -47,13 +47,13 @@ export default function Home() {
 
 					<div className="flex gap-2 sm:gap-6 flex-col w-1/2 sm:w-max sm:flex-row">
 						<Button
-							className={`${jetBrainsMono.className} text-background font-bold`}
+							className={`${jetBrainsMono.className} text-background font-semibold h-10`}
 							color="primary"
 						>
-							Lets Connect {" ~~>"}
+							{"Let\'s Connect ~~>"} 
 						</Button>
 						<Button
-							className={`${jetBrainsMono.className} font-bold h-10`}
+							className={`${jetBrainsMono.className} font-semibold h-10`}
 							as={Link}
 							variant="bordered"
 							color="primary"
@@ -66,11 +66,12 @@ export default function Home() {
 							<p>View GitHub</p>
 						</Button>
 					</div>
-					
+
 				</div>
 			</section>
 			
-			<section className=" pt-24 pb-10">
+			<section className=" pt-24 pb-10 px-10 sm:px-28 md:px-10">
+				<h1 className="text-5xl mb-10 text-left font-bold lg:pl-20">About</h1>
 			<BentoGridThirdDemo/>
 		</section>
 		</div>

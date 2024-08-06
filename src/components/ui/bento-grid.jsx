@@ -7,14 +7,22 @@ import {
 	IconBrandNextjs,
 	IconBrandNodejs,
 	IconBrandReact,
+	IconBuilding,
+	IconBuildingBank,
+	IconCertificate,
+	IconCertificate2,
 	IconCheck,
 	IconClipboardCopy,
 	IconFileBroken,
+	IconFileCertificate,
+	IconHexagonLetterX,
+	IconLetterE,
 	IconMail,
 	IconSignature,
 	IconTableColumn,
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
+
 
 const BentoGridThirdDemo = () => {
 
@@ -34,62 +42,33 @@ const BentoGridThirdDemo = () => {
 	);
 };
 const Skeleton = () => (
-	<div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl   dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black"></div>
+	<div className="absolute w-full h-full min-h-[6rem] rounded-xl [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent bg-neutral-100 dark:bg-black"></div>
 );
 
 const SkeletonOne = () => {
-	const variants = {
-		initial: {
-			x: 0,
+	
+	const variant = {
+		initial:{
+			tracking:"normal",
 		},
-		animate: {
-			x: 10,
-			rotate: 5,
-			transition: {
-				duration: 0.2,
+		animate:{
+			tracking:"widest",
+			transition:{
+				duration:0.2,
 			},
 		},
-	};
-	const variantsSecond = {
-		initial: {
-			x: 0,
-		},
-		animate: {
-			x: -10,
-			rotate: -5,
-			transition: {
-				duration: 0.2,
-			},
-		},
-	};
+		
+	}
 
 	return (
 		<motion.div
 			initial="initial"
 			whileHover="animate"
-			className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2"
+			className=" flex flex-1 w-full justify-center h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2"
 		>
-			<motion.div
-				variants={variants}
-				className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2  items-center space-x-2 bg-white dark:bg-black"
-			>
-				<div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
-				<div className="w-full bg-gray-100 h-4 rounded-full dark:bg-neutral-900" />
-			</motion.div>
-			<motion.div
-				variants={variantsSecond}
-				className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center space-x-2 w-3/4 ml-auto bg-white dark:bg-black"
-			>
-				<div className="w-full bg-gray-100 h-4 rounded-full dark:bg-neutral-900" />
-				<div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
-			</motion.div>
-			<motion.div
-				variants={variants}
-				className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center space-x-2 bg-white dark:bg-black"
-			>
-				<div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
-				<div className="w-full bg-gray-100 h-4 rounded-full dark:bg-neutral-900" />
-			</motion.div>
+			
+			<h1 className="text-xl font-bold tracking-wide">B.TECH</h1>
+			<h1 className=" font-semibold text-4xl text-zinc-300">Information Technology</h1>
 		</motion.div>
 	);
 };
@@ -111,7 +90,6 @@ const SkeletonTwo = () => {
 			},
 		},
 	};
-	const arr = [60,80,40,70,30,75];
 	return (
 		<motion.div
 			initial="initial"
@@ -119,16 +97,7 @@ const SkeletonTwo = () => {
 			whileHover="hover"
 			className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2"
 		>
-			{arr.map((element, i) => (
-				<motion.div
-					key={"skelenton-two" + i}
-					variants={variants}
-					style={{
-						maxWidth: {element} + "%",
-					}}
-					className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2  items-center space-x-2 bg-neutral-100 dark:bg-black w-full h-4"
-				></motion.div>
-			))}
+			<motion.div></motion.div>
 		</motion.div>
 	);
 };
@@ -158,10 +127,10 @@ const SkeletonThree = () => {
 
 				<p className="font-bold">These are worst</p>
 				<motion.div className="flex flex-row ">
-					<IconBrandReact />
 					<IconBrandMongodb />
+					<IconLetterE/>
+					<IconBrandReact />
 					<IconBrandNodejs />
-					<IconBrandNextjs />
 				</motion.div>
 			</motion.div>
 			</motion.div>
@@ -297,15 +266,15 @@ const SkeletonFive = () => {
 
 const items = [
 	{
-		title: "AI Content Generation",
+		title: "B.Tech IT Graduate",
 		description: (
 			<span className="text-sm">
-				Experience the power of AI in generating unique content.
+				I am an IT Graduate from Jaya Engineering College.
 			</span>
 		),
 		header: <SkeletonOne />,
 		className: "md:col-span-1",
-		icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+		icon: <IconCertificate className="h-4 w-4 text-neutral-500" />,
 	},
 	{
 		title: "Automated Proofreading",

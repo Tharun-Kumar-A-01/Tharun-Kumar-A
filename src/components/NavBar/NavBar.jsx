@@ -72,12 +72,12 @@ export default function NavBar() {
 				</div>
 				<div>
 					<Link href="mailto://tharunkumar.a.2006@gmail.com">
-					<button className="text-black text-sm py-2 px-3 bg-primary rounded-lg font-bold flex flex-row flex-shrink-0 gap-2 items-center" >Contact Me <IconMail className="h-6 w-6 text-black "/> </button>
+					<button className={` ${jetBrainsMono.className} text-sm py-2 px-3 bg-primary rounded-lg font-bold flex flex-row flex-shrink-0 gap-2 items-center text-black `} >Contact Me <IconMail className="hidden sm:block h-6 w-6 text-black "/> </button>
 					</Link>
 				</div>
 			</div>
-			{isMenuOpen && (
-				<div className="sm:hidden absolute top-20 z-20 left-5 min-w-1/5 max-w-fit flex flex-col shadow-xl shadow-black bg-default rounded-lg animate-appearance-in">
+			{ 
+				<div className={` ${isMenuOpen ? " ":"-translate-x-full"} transition-all duration-100 sm:hidden absolute top-14 z-20 left-0 w-3/4 sm:w-1/2 md:w-1/4 items-center justify-center gap-2 h-[calc(100vh-3.0rem)] flex flex-col bg-black`}>
 					{links.map((link) => {
 						return (
 							<>
@@ -90,12 +90,11 @@ export default function NavBar() {
 								>
 									{link.title}
 								</Link>
-								{!(links.at(-1).path === link.path) && <Divider />}
 							</>
 						);
 					})}
 				</div>
-			)}
+			}
 		</nav>
 	);
 }
