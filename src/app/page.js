@@ -1,11 +1,7 @@
 import { JetBrains_Mono } from "next/font/google";
 import { Work_Sans } from "next/font/google";
 import {  Link, Button } from "@nextui-org/react";
-import Image from "next/image";
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-import BentoGridThirdDemo from "@/components/ui/bento-grid";
-import { Spotlight } from "@/components/ui/Spotlight";
-import BorderButton from "@/components/ui/border-button";
+import AboutBento from "@/components/ui/bento-grid";
 
 const workSans = Work_Sans({
  	subsets: ["latin"],
@@ -71,8 +67,8 @@ export default function Home() {
 			</section>
 			
 			<section className=" pt-24 pb-10 px-10 sm:px-28 md:px-10">
-				<h1 className="text-5xl mb-10 text-left font-bold lg:pl-20">About</h1>
-			<BentoGridThirdDemo/>
+				<h1 className="text-5xl mb-10 text-left font-bold lg:pl-20">About Me</h1>
+			<AboutBento/>
 		</section>
 		</div>
 	);

@@ -17,7 +17,7 @@ export default function MyApproach() {
         <Card title="Design" icon={<AceternityIcon text="Phase 2"/>}>
           <CanvasRevealEffect
             animationSpeed={3}
-            containerClassName="bg-black"
+            containerClassName="bg-rose-"
             colors={[
               [236, 142, 153],
               [232, 121, 149],

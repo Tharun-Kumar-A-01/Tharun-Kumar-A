@@ -3,28 +3,41 @@ import { cn } from "@/utils/cn";
 import React from "react";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento";
 import {
-	IconBrandMongodb,
-	IconBrandNextjs,
 	IconBrandNodejs,
 	IconBrandReact,
-	IconBuilding,
 	IconBuildingBank,
+	IconBrandGithub,
 	IconCertificate,
-	IconCertificate2,
-	IconCheck,
-	IconClipboardCopy,
 	IconFileBroken,
-	IconFileCertificate,
-	IconHexagonLetterX,
 	IconLetterE,
+	IconLetterM,
+	IconLetterR,
+	IconLetterN,
 	IconMail,
 	IconSignature,
 	IconTableColumn,
+	IconBrandAngular,
+	IconBrandJavascript,
+	IconWebhook,
+	IconStack2,
+	IconBrandOffice,
+	IconWorldWww,
+	IconGizmo,
+	IconSocial,
+	IconHttpConnect,
+	IconLink,
+	IconBrandInstagram,
+	IconBrandX,
+	IconBrandLinkedin,
+	IconBrandDiscordFilled,
+	IconBrandLeetcode,
+	IconBrandStackoverflow,
+	IconBrandGoogle,
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 
 
-const BentoGridThirdDemo = () => {
+const AboutBento = () => {
 
 	return (
 		<BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
@@ -47,24 +60,11 @@ const Skeleton = () => (
 
 const SkeletonOne = () => {
 	
-	const variant = {
-		initial:{
-			tracking:"normal",
-		},
-		animate:{
-			tracking:"widest",
-			transition:{
-				duration:0.2,
-			},
-		},
-		
-	}
-
 	return (
 		<motion.div
 			initial="initial"
 			whileHover="animate"
-			className=" flex flex-1 w-full justify-center h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2"
+			className=" flex flex-1 w-full justify-center h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col "
 		>
 			
 			<h1 className="text-xl font-bold tracking-wide">B.TECH</h1>
@@ -75,29 +75,27 @@ const SkeletonOne = () => {
 const SkeletonTwo = () => {
 	const variants = {
 		initial: {
-			width: 0,
+			backgroundPosition: "0 50%",
 		},
 		animate: {
-			width: "100%",
-			transition: {
-				duration: 0.2,
-			},
-		},
-		hover: {
-			width: ["0%", "100%"],
-			transition: {
-				duration: 2,
-			},
+			backgroundPosition: ["0, 50%", "100% 50%", "0 50%"],
 		},
 	};
 	return (
 		<motion.div
 			initial="initial"
 			animate="animate"
-			whileHover="hover"
-			className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2"
+			className="flex items-center justify-center flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col"
 		>
-			<motion.div></motion.div>
+			<motion.div>
+				<motion.p className="text-black font-bold text-4xl p-2 px-3 rounded-lg w-fit"
+				style={{
+				background:
+					"linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)",
+				backgroundSize: "400% 400%",
+			}} variant = {variants}
+			>#Intern</motion.p>
+			</motion.div>
 		</motion.div>
 	);
 };
@@ -115,25 +113,20 @@ const SkeletonThree = () => {
 			initial="initial"
 			animate="animate"
 			
-			className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] rounded-lg bg-dot-black/[0.2] flex-col space-y-2"
+			className="relative flex flex-row items-center justify-center gap-1  w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] rounded-lg bg-dot-black/[0.2]"
 			// style={{
 			// 	background:
 			// 		"linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)",
 			// 	backgroundSize: "400% 400%",
 			// }}
 		>
-			<motion.div className="h-full w-full rounded-lg flex items-center justify-center">
-			<motion.div className=" flex flex-col items-center justify-center gap-3 bg-black/20 rounded-md">
-
-				<p className="font-bold">These are worst</p>
-				<motion.div className="flex flex-row ">
-					<IconBrandMongodb />
-					<IconLetterE/>
-					<IconBrandReact />
-					<IconBrandNodejs />
+			<motion.div className="h-full w-full rounded-lg flex flex-row items-center justify-center">
+					<IconLetterM className="h-10 w-10 "/>
+					<IconLetterE className="h-10 w-10"/>
+					<IconBrandReact className="text-sky-400 h-10 w-10"/>
+					<IconLetterN className="h-10 w-10"/>
+					
 				</motion.div>
-			</motion.div>
-			</motion.div>
 		</motion.div>
 	);
 };
@@ -159,53 +152,22 @@ const SkeletonFour = () => {
 			rotate: 0,
 		},
 	};
-
+	const classlist = "flex flex-row p-2 bg-black cursor-pointer border border-gray-600 rounded-xl px-3 h-10 items-center justify-center gap-2";
 	return (
 		<motion.div
 			initial="initial"
 			animate="animate"
 			whileHover="hover"
-			className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-row space-x-2"
+			className="flex flex-wrap justify-center items-between gap-2 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-row"
 		>
-			<motion.div
-				variants={first}
-				className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
-			>
-				<div
-					className="bg-gradient-to-r from-pink-500 to-violet-500 rounded-full h-10 w-10 flex-shrink-0"
-				/>
-				<p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-					Just code in Vanilla Javascript
-				</p>
-				<p className="border border-red-500 bg-red-100 dark:bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4">
-					Delusional
-				</p>
-			</motion.div>
-			<motion.div className="h-full relative z-20 w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center">
-			<div
-					className="bg-gradient-to-r from-pink-500 to-violet-500 rounded-full h-10 w-10 flex-shrink-0"
-				/>
-				<p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-					Tailwind CSS is perfect.
-				</p>
-				<p className="border border-green-500 bg-green-100 dark:bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4">
-					Sensible
-				</p>
-			</motion.div>
-			<motion.div
-				variants={second}
-				className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
-			>
-				<div
-					className="bg-gradient-to-r from-pink-500 to-violet-500 rounded-full h-10 w-10 flex-shrink-0"
-				/>
-				<p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-					I hate angular, RSC, and Redux.
-				</p>
-				<p className="border border-orange-500 bg-orange-100 dark:bg-orange-900/20 text-orange-600 text-xs rounded-full px-2 py-0.5 mt-4">
-					Hell
-				</p>
-			</motion.div>
+			<a href="https://github.com/Tharun-Kumar-A-01"><div className={classlist}><IconBrandGithub/> Tharun-Kumar-A-01</div></a>
+			<a href="https://linked.in/-a-tharun-kumar-"><div className={classlist}><IconBrandLinkedin/> -a-tharun-kumar-</div></a>
+			<a href="https://x.com/@A_TK_08"><div className={classlist}><IconBrandX/> A_TK_08</div></a>
+			<a href="https://stackoverflow.com/"><div className={classlist}><IconBrandStackoverflow/> tharun_kumar_.a</div></a>
+			<a href="https://leetcode.com"><div className={classlist}><IconBrandLeetcode/> tharun_kumar_.a</div></a>
+			<a href="https://g.dev/Tharun-Kumar-A"><div className={classlist}><IconBrandGoogle/>Tharun-Kumar-A</div></a>
+			<a href="https://instagram.com/@tharun_kumar_.a"><div className={classlist}><IconBrandInstagram/> tharun_kumar_.a</div></a>
+			<a href="https://discord.com/Tharun-Kumar"><div className={classlist}><IconBrandDiscordFilled/>tharun</div></a>
 		</motion.div>
 	);
 };
@@ -266,10 +228,10 @@ const SkeletonFive = () => {
 
 const items = [
 	{
-		title: "B.Tech IT Graduate",
+		title: "B.Tech IT Student",
 		description: (
 			<span className="text-sm">
-				I am an IT Graduate from Jaya Engineering College.
+				I am an IT student from Jaya Engineering College.
 			</span>
 		),
 		header: <SkeletonOne />,
@@ -277,44 +239,44 @@ const items = [
 		icon: <IconCertificate className="h-4 w-4 text-neutral-500" />,
 	},
 	{
-		title: "Automated Proofreading",
+		title: "Open for Internships",
 		description: (
 			<span className="text-sm">
-				Let AI handle the proofreading of your documents.
+				I am currently open for Internship offers on Web Development.
 			</span>
 		),
 		header: <SkeletonTwo />,
 		className: "md:col-span-1",
-		icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+		icon: <IconGizmo className="h-4 w-4 text-neutral-500" />,
 	},
 	{
-		title: "Contextual Suggestions",
+		title: "Familiar with MERN stack",
 		description: (
 			<span className="text-sm">
-				Get AI-powered suggestions based on your writing context.
+				I am familiar with MERN stack and common JS frameworks such as NextJS.
 			</span>
 		),
 		header: <SkeletonThree />,
 		className: "md:col-span-1",
-		icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+		icon: <IconStack2 className="h-4 w-4 text-neutral-500" />,
 	},
 	{
-		title: "Sentiment Analysis",
+		title: "My Coding Profile",
 		description: (
 			<span className="text-sm">
-				Understand the sentiment of your text with AI analysis.
+				I am very intrested in coding competetions and Challenges.
 			</span>
 		),
 		header: <SkeletonFour />,
 		className: "md:col-span-2",
-		icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+		icon: <IconLink className="h-4 w-4 text-neutral-500" />,
 	},
 
 	{
-		title: "Text Summarization",
+		title: "Contact Me by Email",
 		description: (
 			<span className="text-sm">
-				Summarize your lengthy documents with AI technology.
+				If you have any further enquiries please contact me by Email.
 			</span>
 		),
 		header: <SkeletonFive />,
@@ -323,4 +285,4 @@ const items = [
 	},
 ];
 
-export default BentoGridThirdDemo;
+export default AboutBento;
