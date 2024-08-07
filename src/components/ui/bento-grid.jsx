@@ -33,9 +33,11 @@ import {
 	IconBrandLeetcode,
 	IconBrandStackoverflow,
 	IconBrandGoogle,
+	IconCopy,
+	IconCheck,
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
-
+import Link from "next/link";
 
 const AboutBento = () => {
 
@@ -54,9 +56,6 @@ const AboutBento = () => {
 		</BentoGrid>
 	);
 };
-const Skeleton = () => (
-	<div className="absolute w-full h-full min-h-[6rem] rounded-xl [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent bg-neutral-100 dark:bg-black"></div>
-);
 
 const SkeletonOne = () => {
 	
@@ -132,96 +131,69 @@ const SkeletonThree = () => {
 };
 
 const SkeletonFour = () => {
-	const first = {
-		initial: {
-			x: 20,
-			rotate: -5,
-		},
-		hover: {
-			x: 0,
-			rotate: 0,
-		},
-	};
-	const second = {
-		initial: {
-			x: -20,
-			rotate: 5,
-		},
-		hover: {
-			x: 0,
-			rotate: 0,
-		},
-	};
+	
 	const classlist = "flex flex-row p-2 bg-black cursor-pointer border border-gray-600 rounded-xl px-3 h-10 items-center justify-center gap-2";
 	return (
 		<motion.div
-			initial="initial"
-			animate="animate"
-			whileHover="hover"
 			className="flex flex-wrap justify-center items-between gap-2 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-row"
 		>
-			<a href="https://github.com/Tharun-Kumar-A-01"><div className={classlist}><IconBrandGithub/> Tharun-Kumar-A-01</div></a>
-			<a href="https://linked.in/-a-tharun-kumar-"><div className={classlist}><IconBrandLinkedin/> -a-tharun-kumar-</div></a>
-			<a href="https://x.com/@A_TK_08"><div className={classlist}><IconBrandX/> A_TK_08</div></a>
-			<a href="https://stackoverflow.com/"><div className={classlist}><IconBrandStackoverflow/> tharun_kumar_.a</div></a>
-			<a href="https://leetcode.com"><div className={classlist}><IconBrandLeetcode/> tharun_kumar_.a</div></a>
-			<a href="https://g.dev/Tharun-Kumar-A"><div className={classlist}><IconBrandGoogle/>Tharun-Kumar-A</div></a>
-			<a href="https://instagram.com/@tharun_kumar_.a"><div className={classlist}><IconBrandInstagram/> tharun_kumar_.a</div></a>
-			<a href="https://discord.com/Tharun-Kumar"><div className={classlist}><IconBrandDiscordFilled/>tharun</div></a>
+			<Link href="https://github.com/Tharun-Kumar-A-01"><div className={classlist}><IconBrandGithub/> Tharun-Kumar-A-01</div></Link>
+			<Link href="https://linked.in/-a-tharun-kumar-"><div className={classlist}><IconBrandLinkedin/> -a-tharun-kumar-</div></Link>
+			<Link href="https://x.com/@A_TK_08"><div className={classlist}><IconBrandX/> A_TK_08</div></Link>
+			<Link href="https://stackoverflow.com/"><div className={classlist}><IconBrandStackoverflow/> tharun_kumar_.a</div></Link>
+			<Link href="https://leetcode.com"><div className={classlist}><IconBrandLeetcode/> tharun_kumar_.a</div></Link>
+			<Link href="https://g.dev/Tharun-Kumar-A"><div className={classlist}><IconBrandGoogle/>Tharun-Kumar-A</div></Link>
+			<Link href="https://instagram.com/@tharun_kumar_.a"><div className={classlist}><IconBrandInstagram/> tharun_kumar_.a</div></Link>
+			<Link href="https://discord.com/Tharun-Kumar"><div className={classlist}><IconBrandDiscordFilled/>tharun</div></Link>
 		</motion.div>
 	);
 };
 
 
 const SkeletonFive = () => {
-	const variants = {
-		initial: {
-			x: 0,
-		},
-		animate: {
-			x: 10,
-			rotate: 5,
-			transition: {
-				duration: 0.2,
-			},
-		},
-	};
-	const variantsSecond = {
-		initial: {
-			x: 0,
-		},
-		animate: {
-			x: -10,
-			rotate: -5,
-			transition: {
-				duration: 0.2,
-			},
-		},
-	};
+	const [copy, setcopy] = React.useState(false)
+	const email = "tharun.kumar.a.2006@gmail.com";
+const handleCopy = () => {
+	navigator.clipboard.writeText(email);
+	setcopy(true)
+	setTimeout(() => {
+		setcopy(false)
+	}, 3000);
+}
+
 
 	return (
 		<motion.div
 			initial="initial"
 			whileHover="animate"
-			className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2"
+			className="flex items-center justify-center w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2]"
 		>
-			<motion.div
-				variants={variants}
-				className="flex flex-row rounded-2xl border border-neutral-100 dark:border-white/[0.2] p-2  items-start space-x-2 bg-white dark:bg-black"
-			>
-				<div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
-				<p className="text-xs text-neutral-500">
-					There are a lot of cool framerworks out there like React, Angular,
-					Vue, Svelte that can make your life ....
-				</p>
-			</motion.div>
-			<motion.div
-				variants={variantsSecond}
-				className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center justify-end space-x-2 w-3/4 ml-auto bg-white dark:bg-black"
-			>
-				<p className="text-xs text-neutral-500">Use PHP.</p>
-				<div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
-			</motion.div>
+			<div className="flex md:hidden lg:flex flex-row items-center justify-center gap-0 w-full">
+				<p className="p-3 text-xs rounded-l-lg flex items-center justify-center bg-black border border-gray-800">tharun.kumar.a.2006@gmail.com</p>
+				<button onClick={handleCopy} className=" px-2 py-3 flex items-center justify-center bg-gray-800 border border-gray-800 rounded-r-lg">
+					{ copy ? (<IconCheck className="h-4 text-green-400"/>):
+						(
+
+							<IconCopy className="h-4 text-gray-400"/>
+						)
+					}
+					
+				</button>
+			</div>
+			
+			<div className=" text-sm p-2 hidden md:flex lg:hidden  flex-row items-center justify-center gap-0 w-full">
+				<p className="p-3 text-xs rounded-l-lg flex items-center justify-center bg-black border border-gray-800">Copy my Email</p>
+				<button onClick={handleCopy} className=" px-2 py-3 flex items-center justify-center bg-gray-800 border border-gray-800 rounded-r-lg">
+					{ copy ? (<IconCheck className="h-4 text-green-400"/>):
+						(
+
+							<IconCopy className="h-4 text-gray-400"/>
+						)
+					}
+					
+				</button>
+			</div>
+
 		</motion.div>
 	);
 };
