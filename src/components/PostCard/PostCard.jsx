@@ -5,7 +5,7 @@ export default function PostCard(post) {
   return (
     <>
     <motion.div>
-		
+      {post}
     </motion.div>
     </>
   );
