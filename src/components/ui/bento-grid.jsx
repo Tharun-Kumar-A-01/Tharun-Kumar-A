@@ -1,30 +1,20 @@
 "use client";
+import { Work_Sans } from "next/font/google";
 import { cn } from "@/utils/cn";
 import React from "react";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento";
 import {
-	IconBrandNodejs,
 	IconBrandReact,
-	IconBuildingBank,
 	IconBrandGithub,
 	IconCertificate,
-	IconFileBroken,
 	IconLetterE,
 	IconLetterM,
 	IconLetterR,
 	IconLetterN,
 	IconMail,
-	IconSignature,
-	IconTableColumn,
 	IconBrandAngular,
-	IconBrandJavascript,
-	IconWebhook,
 	IconStack2,
-	IconBrandOffice,
-	IconWorldWww,
 	IconGizmo,
-	IconSocial,
-	IconHttpConnect,
 	IconLink,
 	IconBrandInstagram,
 	IconBrandX,
@@ -38,6 +28,12 @@ import {
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+
+
+const workSans = Work_Sans({
+	subsets: ["latin"],
+ weight: ["400", "700"], 
+});
 
 const AboutBento = () => {
 
@@ -132,7 +128,7 @@ const SkeletonThree = () => {
 
 const SkeletonFour = () => {
 	
-	const classlist = "flex flex-row p-2 bg-black cursor-pointer border border-gray-600 rounded-xl px-3 h-10 items-center justify-center gap-2";
+	const classlist = `${workSans.className} flex flex-row p-2 text-xs bg-black cursor-pointer border border-gray-600 rounded-xl h-10 items-center justify-center gap-2`;
 	return (
 		<motion.div
 			className="flex flex-wrap justify-center items-between gap-2 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-row"

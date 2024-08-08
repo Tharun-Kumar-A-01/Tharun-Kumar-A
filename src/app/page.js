@@ -29,7 +29,7 @@ export default function Home() {
 							FULL STACK DEVELOPER
 							</span>
 					</p>
-					<h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold m-0">
+					<h1 className="text-5xl  md:text-6xl  font-bold m-0">
 						I am <span className="text-primary">Tharun Kumar</span>
 						
 					</h1>
