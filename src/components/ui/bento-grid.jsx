@@ -28,7 +28,7 @@ import {
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-
+import { Arial } from "../../app/page";
 
 const workSans = Work_Sans({
 	subsets: ["latin"],
@@ -62,8 +62,8 @@ const SkeletonOne = () => {
 			className=" flex flex-1 w-full justify-center h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col "
 		>
 			
-			<h1 className="text-xl font-bold tracking-wide">B.TECH</h1>
-			<h1 className=" font-semibold text-4xl text-zinc-300">Information Technology</h1>
+			<h1 className={`${Arial.className} text-xl font-bold tracking-wide`}>B.TECH</h1>
+			<h1 className={`${Arial.className} font-bold text-[2.5rem] md:text-[2.25rem] lg:text-[2.5rem] text-4xl text-zinc-300`}>Information Technology</h1>
 		</motion.div>
 	);
 };
@@ -83,13 +83,14 @@ const SkeletonTwo = () => {
 			className="flex items-center justify-center flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col"
 		>
 			<motion.div>
-				<motion.p className="text-black font-bold text-4xl p-2 px-3 rounded-lg w-fit"
+				<motion.p className={`${Arial.className} text-black font-bold text-[2.5rem] text-4xl py-3 px-4 rounded-lg w-fit`}
 				style={{
 				background:
 					"linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)",
 				backgroundSize: "400% 400%",
 			}} variant = {variants}
 			>#Intern</motion.p>
+			
 			</motion.div>
 		</motion.div>
 	);
@@ -128,7 +129,7 @@ const SkeletonThree = () => {
 
 const SkeletonFour = () => {
 	
-	const classlist = `${workSans.className} flex flex-row p-2 text-xs bg-black cursor-pointer border border-gray-600 rounded-xl h-10 items-center justify-center gap-2`;
+	const classlist = `${workSans.className} flex flex-row p-2 text-sm bg-black cursor-pointer border border-gray-600 rounded-xl h-10 items-center justify-center gap-2`;
 	return (
 		<motion.div
 			className="flex flex-wrap justify-center items-between gap-2 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-row"
@@ -165,7 +166,7 @@ const handleCopy = () => {
 			className="flex items-center justify-center w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2]"
 		>
 			<div className="flex md:hidden lg:flex flex-row items-center justify-center gap-0 w-full">
-				<p className="p-3 text-xs rounded-l-lg flex items-center justify-center bg-black border border-gray-800">tharun.kumar.a.2006@gmail.com</p>
+				<p className={`${workSans.className} p-3 text-xs rounded-l-lg flex items-center justify-center bg-black border border-gray-800`}>tharun.kumar.a.2006@gmail.com</p>
 				<button onClick={handleCopy} className=" px-2 py-3 flex items-center justify-center bg-gray-800 border border-gray-800 rounded-r-lg">
 					{ copy ? (<IconCheck className="h-4 text-green-400"/>):
 						(
@@ -178,7 +179,7 @@ const handleCopy = () => {
 			</div>
 			
 			<div className=" text-sm p-2 hidden md:flex lg:hidden  flex-row items-center justify-center gap-0 w-full">
-				<p className="p-3 text-xs rounded-l-lg flex items-center justify-center bg-black border border-gray-800">Copy my Email</p>
+				<p className={`${workSans.className} p-3 text-xs rounded-l-lg flex items-center justify-center bg-black border border-gray-800`}>Copy Email</p>
 				<button onClick={handleCopy} className=" px-2 py-3 flex items-center justify-center bg-gray-800 border border-gray-800 rounded-r-lg">
 					{ copy ? (<IconCheck className="h-4 text-green-400"/>):
 						(
