@@ -135,10 +135,10 @@ const SkeletonFour = () => {
 			className="flex flex-wrap justify-center items-between gap-2 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-row"
 		>
 			<Link href="https://github.com/Tharun-Kumar-A-01"><div className={classlist}><IconBrandGithub/> Tharun-Kumar-A-01</div></Link>
-			<Link href="https://linked.in/-a-tharun-kumar-"><div className={classlist}><IconBrandLinkedin/> -a-tharun-kumar-</div></Link>
+			<Link href="https://www.linkedin.com/in/-a-tharun-kumar-/"><div className={classlist}><IconBrandLinkedin/> -a-tharun-kumar-</div></Link>
 			<Link href="https://x.com/@A_TK_08"><div className={classlist}><IconBrandX/> A_TK_08</div></Link>
-			<Link href="https://stackoverflow.com/"><div className={classlist}><IconBrandStackoverflow/> tharun_kumar_.a</div></Link>
-			<Link href="https://leetcode.com"><div className={classlist}><IconBrandLeetcode/> tharun_kumar_.a</div></Link>
+			<Link href="https://stackoverflow.com/users/23519630/tharun-kumar"><div className={classlist}><IconBrandStackoverflow/> tharun_kumar_.a</div></Link>
+			<Link href="https://leetcode.com/u/Tharun_Kumar_A/"><div className={classlist}><IconBrandLeetcode/> tharun_kumar_.a</div></Link>
 			<Link href="https://g.dev/Tharun-Kumar-A"><div className={classlist}><IconBrandGoogle/>Tharun-Kumar-A</div></Link>
 			<Link href="https://instagram.com/@tharun_kumar_.a"><div className={classlist}><IconBrandInstagram/> tharun_kumar_.a</div></Link>
 			<Link href="https://discord.com/Tharun-Kumar"><div className={classlist}><IconBrandDiscordFilled/>tharun</div></Link>
