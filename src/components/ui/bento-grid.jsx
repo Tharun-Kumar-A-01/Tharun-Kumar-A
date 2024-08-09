@@ -63,7 +63,7 @@ const SkeletonOne = () => {
 		>
 			
 			<h1 className={`${Arial.className} text-xl font-bold tracking-wide`}>B.TECH</h1>
-			<h1 className={`${Arial.className} font-bold text-[2.5rem] md:text-[2.25rem] lg:text-[2.5rem] text-4xl text-zinc-300`}>Information Technology</h1>
+			<h1 className={`${Arial.className} font-bold text-[2.5rem] md:text-[2.25rem] lg:text-[2.5rem] text-4xl text-[#d1d1d1]`}>Information Technology</h1>
 		</motion.div>
 	);
 };
@@ -96,18 +96,19 @@ const SkeletonTwo = () => {
 	);
 };
 const SkeletonThree = () => {
-	// const variants = {
-	// 	initial: {
-	// 		backgroundPosition: "0 50%",
-	// 	},
-	// 	animate: {
-	// 		backgroundPosition: ["0, 50%", "100% 50%", "0 50%"],
-	// 	},
-	// };
+	const variants = {
+		initial: {
+			rotate:0,
+		},
+		animate: {
+			rotate:"90deg",
+			transition: "0.2s all ease"
+		},
+	};
 	return (
 		<motion.div
 			initial="initial"
-			animate="animate"
+			whileHover="animate"
 			
 			className="relative flex flex-row items-center justify-center gap-1  w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] rounded-lg bg-dot-black/[0.2]"
 			// style={{
@@ -119,7 +120,9 @@ const SkeletonThree = () => {
 			<motion.div className="h-full w-full rounded-lg flex flex-row items-center justify-center">
 					<IconLetterM className="h-10 w-10 "/>
 					<IconLetterE className="h-10 w-10"/>
+					<motion.div variants={variants} className="w-fit">
 					<IconBrandReact className="text-sky-400 h-10 w-10"/>
+					</motion.div>
 					<IconLetterN className="h-10 w-10"/>
 					
 				</motion.div>
@@ -129,19 +132,18 @@ const SkeletonThree = () => {
 
 const SkeletonFour = () => {
 	
-	const classlist = `${workSans.className} flex flex-row p-2 text-sm bg-black cursor-pointer border border-gray-600 rounded-xl h-10 items-center justify-center gap-2`;
+	const classlist = `${workSans.className} flex flex-row p-2 text-xs bg-black cursor-pointer border border-gray-600 hover:border-blue-500 transition-duration-100 transition-all rounded-xl h-10 items-center justify-center gap-2`;
 	return (
 		<motion.div
-			className="flex flex-wrap justify-center items-between gap-2 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-row"
+			className="flex flex-wrap justify-center content-center items-center gap-2 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-row"
 		>
 			<Link href="https://github.com/Tharun-Kumar-A-01"><div className={classlist}><IconBrandGithub/> Tharun-Kumar-A-01</div></Link>
 			<Link href="https://www.linkedin.com/in/-a-tharun-kumar-/"><div className={classlist}><IconBrandLinkedin/> -a-tharun-kumar-</div></Link>
 			<Link href="https://x.com/@A_TK_08"><div className={classlist}><IconBrandX/> A_TK_08</div></Link>
-			<Link href="https://stackoverflow.com/users/23519630/tharun-kumar"><div className={classlist}><IconBrandStackoverflow/> tharun_kumar_.a</div></Link>
-			<Link href="https://leetcode.com/u/Tharun_Kumar_A/"><div className={classlist}><IconBrandLeetcode/> tharun_kumar_.a</div></Link>
+			<Link href="https://stackoverflow.com/users/23519630/tharun-kumar"><div className={classlist}><IconBrandStackoverflow/> tharun-kumar</div></Link>
+			<Link href="https://leetcode.com/u/Tharun_Kumar_A/"><div className={classlist}><IconBrandLeetcode/> Tharun_Kumar_A</div></Link>
 			<Link href="https://g.dev/Tharun-Kumar-A"><div className={classlist}><IconBrandGoogle/>Tharun-Kumar-A</div></Link>
 			<Link href="https://instagram.com/@tharun_kumar_.a"><div className={classlist}><IconBrandInstagram/> tharun_kumar_.a</div></Link>
-			<Link href="https://discord.com/Tharun-Kumar"><div className={classlist}><IconBrandDiscordFilled/>tharun</div></Link>
 		</motion.div>
 	);
 };
