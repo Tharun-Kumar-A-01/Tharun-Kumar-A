@@ -48,6 +48,8 @@ export default function Home() {
 					<div className="flex gap-2 sm:gap-6 flex-col max-w-1/2 sm:w-max sm:flex-row">
 						<Button
 							className={`${jetBrainsMono.className} text-background font-semibold h-10`}
+							as={Link}
+							href="https://linkedin.com/in/-a-tharun-kumar-"
 							color="primary"
 						>
 							{"Let\'s Connect ~~>"} 
